@@ -91,6 +91,10 @@ body {
     right: 0;
     height: 60px;
     background-color: #3d4a5c;
+    padding: 20px 0;
+    text-align: center;
+    color: #ffff;
+    font-size: 14px;
 }
 
 /* 콘텐츠 섹션 */
@@ -129,6 +133,7 @@ body {
     font-size: 36px;
     font-family: monospace;
 }
+
 
 
 
