@@ -1,4 +1,3 @@
-
 // 햄버거 메뉴 토글
 const menuToggle = document.getElementById('menuToggle');
 const sidebar = document.getElementById('sidebar');
@@ -31,4 +30,40 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// 이미지 모달 기능
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("imageModalImg");
+    const closeBtn = document.querySelector(".image-modal-close");
+
+    // 모든 이미지에 클릭 이벤트 추가
+    document.querySelectorAll(".content-item img, .result-image img").forEach(img => {
+        img.addEventListener("click", () => {
+            modal.style.display = "flex";
+            modalImg.src = img.src;
+            document.body.style.overflow = "hidden"; // 배경 스크롤 방지
+        });
+    });
+
+    // 닫기 버튼 클릭
+    closeBtn.addEventListener("click", closeModal);
+    
+    // 모달 배경 클릭
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+    });
+
+    // 모달 닫기 함수
+    function closeModal() {
+        modal.style.display = "none";
+        modalImg.src = "";
+        document.body.style.overflow = "";
+    }
 });
