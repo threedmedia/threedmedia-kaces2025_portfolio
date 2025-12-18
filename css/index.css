@@ -184,11 +184,11 @@
  /* 반응형 디자인 */
  @media (max-width: 1024px) {
      .hero-title h1 {
-         font-size: 20px;
+         font-size: 28px;
      }
 
      .hero-title h2 {
-         font-size: 18px;
+         font-size: 24px;
      }
 
      .poster-container {
@@ -214,11 +214,11 @@
      }
 
      .hero-title h1 {
-         font-size: 18px;
+         font-size: 28px;
      }
 
      .hero-title h2 {
-         font-size: 16px;
+         font-size: 24px;
      }
 
      .poster-label {
